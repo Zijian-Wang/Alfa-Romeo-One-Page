@@ -4,6 +4,7 @@ import groundIMG from './heroImage/ground.png'
 import Iframe from 'react-iframe'
 import HLCurve from './components/hl-Curve'
 import HLDoor from './components/hl-Door'
+import HLCollections from './components/hl-Collections'
 
 function App() {
   return (
@@ -91,14 +92,25 @@ function App() {
           </div>
           <div className="hl-card">
             <div className="hl-card-content">
-              <h1>Purely Hand Made</h1>
-              <p>
+              {/* <h1>Purely Hand Made</h1> */}
+              {/* <p>
                 The 33 Stradale was built by hand, resulted in differences in
                 each model. For example, the first two cars had twin headlights,
                 replaced for later cars by single headlights. The position of
                 the windscreen wiper, and even the number of them, is another
                 thing that differentiates each example from the others.
+              </p> */}
+              <h1>Exclusivity</h1>
+              <p>
+                The Alfa Romeo 33 Stradale is a rare and valuable car. Only 18
+                were made, making it one of the most exclusive vehicles in the
+                world. It was also the first Alfa Romeo to be built entirely of
+                aluminum. Its sleek design and impressive performance make it
+                highly sought after by collectors.
               </p>
+            </div>
+            <div className="hl-card-canvas">
+              <HLCollections />
             </div>
           </div>
         </div>

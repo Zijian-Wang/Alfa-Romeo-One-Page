@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import { PresentationControls, Stage, useGLTF } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import CarAnimModel from './carDoorAnim'
 import { StrictMode, Suspense } from 'react'
 
@@ -10,11 +10,9 @@ export default function HLDoor(params) {
     <>
       <StrictMode>
         <Canvas camera={cameras[0]}>
-          <Stage>
-            <Suspense>
-              <CarAnimModel />
-            </Suspense>
-          </Stage>
+          <Suspense fallback={null}>
+            <CarAnimModel />
+          </Suspense>
         </Canvas>
       </StrictMode>
     </>
