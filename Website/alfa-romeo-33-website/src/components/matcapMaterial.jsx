@@ -15,6 +15,17 @@ export default function MatcapMaterial(params) {
     matcap: matcapTexture,
     color: '#ff6d63',
   })
+  matcapMaterial.side = THREE.DoubleSide
 
-  return matcapMaterial
+  const wireframeMaterial = new THREE.MeshStandardMaterial({
+    // matcap: matcapTexture,
+    color: '#ff6d63',
+    wireframe: true,
+  })
+  wireframeMaterial.side = THREE.DoubleSide
+  wireframeMaterial.wireframeLinewidth = 10
+
+  const material = params === 'wireframe' ? wireframeMaterial : matcapMaterial
+
+  return material
 }

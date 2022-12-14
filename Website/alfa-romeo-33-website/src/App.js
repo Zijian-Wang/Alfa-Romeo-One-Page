@@ -5,6 +5,7 @@ import Iframe from 'react-iframe'
 import HLCurve from './components/hl-Curve'
 import HLDoor from './components/hl-Door'
 import HLCollections from './components/hl-Collections'
+import Gallery from './components/gallery'
 
 function App() {
   return (
@@ -114,7 +115,9 @@ function App() {
             </div>
           </div>
         </div>
-        <div id="gallery"></div>
+        <div id="gallery">
+          <Gallery />
+        </div>
       </div>
     </>
   )
