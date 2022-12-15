@@ -112,7 +112,7 @@ nav a:hover {
   flex-direction: column;
   width: 100vw;
   align-items: center;
-  top: min(15vw, 12rem);
+  top: min(22vw, 10rem);
   font-family: 'Zen Dots';
   font-style: normal;
   margin: auto;
