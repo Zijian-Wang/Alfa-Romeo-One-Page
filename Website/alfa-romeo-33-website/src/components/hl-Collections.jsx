@@ -1,9 +1,9 @@
 import { Canvas } from '@react-three/fiber'
 import { PresentationControls } from '@react-three/drei'
 import { StrictMode, Suspense } from 'react'
-import { Perf } from 'r3f-perf'
 import { CarCollection } from './carCollections'
 import * as THREE from 'three'
+// import { Perf } from 'r3f-perf'
 // import { useControls } from 'leva'
 
 export default function HLCollections(params) {
@@ -21,7 +21,7 @@ export default function HLCollections(params) {
     <>
       <StrictMode>
         <Canvas camera={camera}>
-          <Perf position="top-left" />
+          {/* <Perf position="top-left" /> */}
 
           <PresentationControls
             global

@@ -5,7 +5,8 @@ import Iframe from 'react-iframe'
 import HLCurve from './components/hl-Curve'
 import HLDoor from './components/hl-Door'
 import HLCollections from './components/hl-Collections'
-import Gallery from './components/gallery'
+import ImageCarousel from './components/ImageCarousel'
+import logo from './img/alfaRomeoLogo.png'
 
 function App() {
   return (
@@ -50,75 +51,91 @@ function App() {
             </p>
           </div>
         </div>
-        <div id="play">
-          {/* insert an iframe here */}
-          <Iframe
-            url="https://player.vimeo.com/video/453147000?h=58716f252b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            id="play-video"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-            title="To The Greater View"
-          />
-        </div>
-        <div id="highlights">
-          <div className="hl-card">
-            <div className="hl-card-content">
-              <h1>Curve Flow</h1>
-              <p>
-                The Alfa Romeo 33 Stradale features a distinctive nose design
-                with curves that flow perfectly from tip to tail, inviting
-                onlookers to stare and stare. This design was created by Franco
-                Scaglione and was inspired by the Alfa Romeo Tipo 33 racing car.
-              </p>
-            </div>
-            <div className="hl-card-canvas">
-              <HLCurve />
-            </div>
+        <div className="dark-bg">
+          <div id="play">
+            {/* insert an iframe here */}
+            <Iframe
+              url="https://player.vimeo.com/video/453147000?h=58716f252b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              id="play-video"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              title="To The Greater View"
+            />
           </div>
+          <div id="highlights">
+            <div className="hl-card">
+              <div className="hl-card-content">
+                <h1>Curve Flow</h1>
+                <p>
+                  The Alfa Romeo 33 Stradale features a distinctive nose design
+                  with curves that flow perfectly from tip to tail, inviting
+                  onlookers to stare and stare. This design was created by
+                  Franco Scaglione and was inspired by the Alfa Romeo Tipo 33
+                  racing car.
+                </p>
+              </div>
+              <div className="hl-card-canvas">
+                <HLCurve />
+              </div>
+            </div>
 
-          <div className="hl-card">
-            <div className="hl-card-content">
-              <h1>Butterfly Door</h1>
-              <p>
-                The Alfa Romeo 33 Stradale has doors that are hinged at the
-                front, allowing them to swing outwards to provide access to the
-                car's interior. This design, also known as butterfly doors, is
-                rare on production cars and adds to the 33 Stradale's
-                distinctive and exotic appearance.
-              </p>
+            <div className="hl-card">
+              <div className="hl-card-content">
+                <h1>Butterfly Door</h1>
+                <p>
+                  The Alfa Romeo 33 Stradale has doors that are hinged at the
+                  front, allowing them to swing outwards to provide access to
+                  the car's interior. This design, also known as butterfly
+                  doors, is rare on production cars and adds to the 33
+                  Stradale's distinctive and exotic appearance.
+                </p>
+              </div>
+              <div className="hl-card-canvas">
+                <HLDoor />
+              </div>
             </div>
-            <div className="hl-card-canvas">
-              <HLDoor />
-            </div>
-          </div>
-          <div className="hl-card">
-            <div className="hl-card-content">
-              {/* <h1>Purely Hand Made</h1> */}
-              {/* <p>
+            <div className="hl-card">
+              <div className="hl-card-content">
+                {/* <h1>Purely Hand Made</h1> */}
+                {/* <p>
                 The 33 Stradale was built by hand, resulted in differences in
                 each model. For example, the first two cars had twin headlights,
                 replaced for later cars by single headlights. The position of
                 the windscreen wiper, and even the number of them, is another
                 thing that differentiates each example from the others.
               </p> */}
-              <h1>Exclusivity</h1>
-              <p>
-                The Alfa Romeo 33 Stradale is a rare and valuable car. Only 18
-                were made, making it one of the most exclusive vehicles in the
-                world. It was also the first Alfa Romeo to be built entirely of
-                aluminum. Its sleek design and impressive performance make it
-                highly sought after by collectors.
-              </p>
-            </div>
-            <div className="hl-card-canvas">
-              <HLCollections />
+                <h1>Exclusivity</h1>
+                <p>
+                  The Alfa Romeo 33 Stradale is a rare and valuable car. Only 18
+                  were made, making it one of the most exclusive vehicles in the
+                  world. It was also the first Alfa Romeo to be built entirely
+                  of aluminum. Its sleek design and impressive performance make
+                  it highly sought after by collectors.
+                </p>
+              </div>
+              <div className="hl-card-canvas">
+                <HLCollections />
+              </div>
             </div>
           </div>
         </div>
         <div id="gallery">
-          <Gallery />
+          <div className="gallery-title">
+            <p>Gallery</p>
+          </div>
+          <div className="gallery-body">
+            <ImageCarousel />
+          </div>
         </div>
       </div>
+      <footer>
+        <div className="footer-logo">
+          <img src={logo} alt="Logo of Alfa Romeo" />
+        </div>
+        <div className="footer-text">
+          <p>Design & Coded with love by ZJ</p>
+        </div>
+      </footer>
     </>
   )
 }
