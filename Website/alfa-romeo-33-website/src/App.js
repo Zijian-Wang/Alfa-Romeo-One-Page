@@ -133,7 +133,16 @@ function App() {
           <img src={logo} alt="Logo of Alfa Romeo" />
         </div>
         <div className="footer-text">
-          <p>Design & Coded with love by ZJ</p>
+          <p>
+            Design & Coded with love by{' '}
+            <a
+              href="https://zijiandesign.myportfolio.com/"
+              target={'_blank'}
+              rel={'noreferer'}
+            >
+              ZJ
+            </a>
+          </p>
         </div>
       </footer>
     </>

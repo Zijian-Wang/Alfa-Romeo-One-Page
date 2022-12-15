@@ -11,7 +11,11 @@ const ImageCarousel = () => {
   return (
     <>
       <div className="carousel">
-        <img src={longImage} alt={'Alfa Romeo 33 Stradale Images'} />
+        <img
+          className="carousel-images"
+          src={longImage}
+          alt={'Alfa Romeo 33 Stradale Images'}
+        />
       </div>
     </>
   )
