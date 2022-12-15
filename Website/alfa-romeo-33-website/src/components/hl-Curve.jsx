@@ -18,7 +18,7 @@ export default function HLCurve() {
             polar={[-Math.PI / 8, Math.PI / 8]}
             azimuth={[-Math.PI / 4, Math.PI / 4]}
           >
-            <Suspense>
+            <Suspense fallback={null}>
               <CarStillModel />
             </Suspense>
           </PresentationControls>

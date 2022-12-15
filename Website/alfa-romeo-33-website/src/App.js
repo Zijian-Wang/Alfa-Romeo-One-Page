@@ -1,4 +1,4 @@
-import './App.css'
+import { Suspense } from 'react'
 import carIMG from './heroImage/Optimized_car.png'
 import groundIMG from './heroImage/ground.png'
 import Iframe from 'react-iframe'
@@ -7,6 +7,10 @@ import HLDoor from './components/hl-Door'
 import HLCollections from './components/hl-Collections'
 import ImageCarousel from './components/ImageCarousel'
 import logo from './img/alfaRomeoLogo.png'
+import './App.css'
+// import './fonts/SpaceGrotesk-Medium.ttf'
+// import './fonts/SpaceGrotesk-Regular.ttf'
+// import './fonts/ZenDots-Regular.ttf'
 
 function App() {
   return (
@@ -54,13 +58,15 @@ function App() {
         <div className="dark-bg">
           <div id="play">
             {/* insert an iframe here */}
-            <Iframe
-              url="https://player.vimeo.com/video/453147000?h=58716f252b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              id="play-video"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen
-              title="To The Greater View"
-            />
+            <Suspense fallback={null}>
+              <Iframe
+                url="https://player.vimeo.com/video/453147000?h=58716f252b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                id="play-video"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                title="To The Greater View"
+              />
+            </Suspense>
           </div>
           <div id="highlights">
             <div className="hl-card">
@@ -75,7 +81,9 @@ function App() {
                 </p>
               </div>
               <div className="hl-card-canvas">
-                <HLCurve />
+                <Suspense fallback={null}>
+                  <HLCurve />
+                </Suspense>
               </div>
             </div>
 
@@ -91,7 +99,9 @@ function App() {
                 </p>
               </div>
               <div className="hl-card-canvas">
-                <HLDoor />
+                <Suspense fallback={null}>
+                  <HLDoor />
+                </Suspense>
               </div>
             </div>
             <div className="hl-card">
@@ -124,7 +134,9 @@ function App() {
             <p>Gallery</p>
           </div>
           <div className="gallery-body">
-            <ImageCarousel />
+            <Suspense fallback={null}>
+              <ImageCarousel />
+            </Suspense>
           </div>
         </div>
       </div>

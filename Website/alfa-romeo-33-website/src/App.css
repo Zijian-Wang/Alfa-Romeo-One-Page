@@ -5,6 +5,19 @@
   --responsive-margin: 20px;
 }
 
+/* @font-face {
+  font-family: 'Space Grotesk';
+  src: local('SpaceGrotesk-Regular.ttf');
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: local('SpaceGrotesk-Medium.ttf');
+}
+@font-face {
+  font-family: 'Zen Dots';
+  src: local('ZenDots-Regular.ttf');
+} */
+
 canvas {
   touch-action: none;
 }
@@ -248,7 +261,6 @@ h2 {
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
 
-  font-family: 'Space Grotesk', sans-serif;
   font-style: normal;
   font-size: 1.5rem;
   line-height: 1.9rem;
@@ -258,12 +270,14 @@ h2 {
 .story-title {
   grid-area: 1/2/2/6;
   font-weight: 500;
+  font-family: 'Space Grotesk';
   letter-spacing: -1px;
 }
 
 .story-body {
   grid-area: 1/6/2/12;
   font-weight: 400;
+  font-family: 'Space Grotesk';
   text-align: justify;
   letter-spacing: -0.5px;
 }
@@ -600,7 +614,7 @@ footer {
 
 .footer-text a:hover {
   color: var(--black);
-  font-weight: 700;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 768px) {
