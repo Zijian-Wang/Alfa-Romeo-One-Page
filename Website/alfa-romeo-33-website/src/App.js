@@ -64,6 +64,9 @@ function App() {
                 id="play-video"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                sandbox="allow-scripts allow-same-origin allow-presentation"
                 title="To The Greater View"
               />
             </Suspense>
@@ -150,7 +153,7 @@ function App() {
             <a
               href="https://zijiandesign.myportfolio.com/"
               target={'_blank'}
-              rel={'noreferer'}
+              rel={'noopener noreferrer'}
             >
               ZJ
             </a>
